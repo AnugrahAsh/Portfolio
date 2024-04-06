@@ -1,0 +1,347 @@
+html, body, div, span, applet, object, iframe,
+blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	.paprika-regular {
+  font-family: "Paprika", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.space{
+	height: 600px;
+	width: 100%;
+	background-color: rgb(56, 155, 183);
+}
+nav{
+	display: flex;
+	padding: 20px 0 20px 20px;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	position: sticky;
+	font-family: 'Ubuntu', sans-serif;
+	position: sticky;
+}
+.links{
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+	align-items: center;
+}
+#github{
+	
+	color: black;
+}
+a{
+	color: whitesmoke;
+	text-decoration: none;
+}
+.logo{
+	padding-left: 40px;
+	font-size: 20px;
+}
+.intro{
+	/* height: 400px; */
+	width: 400px;
+}
+.ooh{
+	display: flex;
+	flex-direction: row;
+	margin-left: 200px;
+	margin-top: 56px;
+	gap: 200px;
+}
+h2{
+	margin-bottom: 20px;
+	color: #8e2935;
+	font-family: 'Roboto', sans-serif;
+}
+h1{
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
+	line-height: 1.2;
+	font-size: 40px;
+}
+.intro p{
+	font-family: 'Roboto', sans-serif;
+	color: rgba(245, 245, 245, 0.6);
+	line-height: 1.5;
+}
+#Hireme{
+	background-color: #8e2935;
+	border: none;
+	color: whitesmoke;
+	font-family: 'Ubuntu', sans-serif;
+	padding: 10px 24px;
+	cursor: pointer;
+}
+
+
+.butn{
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+}
+.skills{
+	padding-top: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.skills p{
+	width: 560px;
+	line-height: 1.5;
+	text-align: center;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+}
+.icons span img{
+	height: 40px;
+	width: 40px;
+}
+.icons{
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+}
+.skills a{
+	margin-top: 20px;
+	text-decoration: underline;
+	font-size: 18px;
+}
+.projects{
+	background-color: #ddb892;
+	margin-top: 150px;
+	padding: 50px;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	
+}
+.projects img{
+	height: 200px;
+	border-radius: 20px;
+	border: black 2px solid ;
+	width: 400px;
+}
+.prj-one , .prj-three{
+	width: 1000px;
+	border: 3px solid white;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 120px;
+	padding: 40px;
+	transition: ease-in-out 0.3s;
+
+}
+.prj-one:hover{
+	background-color: #77aca2;
+	transition: ease-in-out 0.3s;
+	transform: scale(1.005) translateY(-5px) ;
+}
+
+.prj-three:hover{
+	background-color: #9a8c98;
+	transition: ease-in-out 0.3s;
+	transform: scale(1.005) translateY(-5px) ;
+}
+.prj-two:hover{
+	background-color: #efc02d;
+	transition: ease-in-out 0.3s;
+	transform: scale(1.005) translateY(-5px) ;
+}
+.desc{
+	color: rgb(0, 0, 0);
+}
+.desc h3{
+	font-size: 26px;
+}
+.desc p{
+	font-size: 20.5px;
+	line-height: 1.05;
+}
+.desc a{
+	text-decoration: underline;
+	color: black;
+}
+.prj-two{
+	width: 1000px;
+	border: 3px solid white;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+	gap: 120px;
+	padding: 40px;
+	transition: ease-in-out 0.3s;
+
+}
+.projects section{
+	margin-top: 50px;
+	display: flex;
+	gap: 60px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+h2 a{
+	color: black;
+	font-size: 18px;
+}
+.achievements{
+	margin-top: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: black;
+	background-color: #bab6b6;
+	font-family: 'Roboto', sans-serif;
+	padding-bottom: 40px;
+	padding-top: 60px;
+}
+.achievements h1{
+	color: white;
+	margin-bottom: 60px;
+}
+.achieve{
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	text-align: center;
+}
+.achieve div{
+	display: flex;
+	flex-direction: row;
+	height: 200px;
+	gap: 50px;
+	width: 500px;
+	border: 3px solid black;
+	padding: 30px;
+	border-radius: 20px;
+}
+.achieve img{
+	height: 200px;
+	width: 200px;
+	border-radius: 20px;
+	border: 3px solid black;
+}
+.connect{
+	margin-top: 200px;
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	color: black;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-bottom: 100px;
+}
+.connect h1{
+	color: black;
+}
+.connect p{
+	font-size: 20px;
+	margin-bottom: 60px;
+}
+.conn div a{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 20px;
+	color: black;
+}
+.conn{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.one{
+	background-color: #78c094;
+	padding: 2px 10px;
+	border-radius: 20px;
+	border: 3px solid black;
+	transition: ease-in-out 0.3s;
+}
+.two{
+	background-color: #c0a678;
+	padding: 2px 10px;
+	border-radius: 20px;
+	border: 3px solid black;
+	transition: ease-in-out 0.3s;
+
+}
+.three{
+	background-color: #c078a0;
+	padding: 2px 10px;
+	border-radius: 20px;
+	border: 3px solid black;
+	transition: ease-in-out 0.3s;
+
+}
+.four{
+	background-color: #c07878;
+	padding: 2px 10px;
+	border-radius: 20px;
+	border: 3px solid black;
+	transition: ease-in-out 0.3s;
+
+}
+.one:hover{
+	transition: ease-in-out 0.3s;
+	transform: translateY(-5px) scale(1.01);
+}
+.two:hover{
+	transition: ease-in-out 0.3s;
+	transform: translateY(-5px) scale(1.01);
+}
+.three:hover{
+	transition: ease-in-out 0.3s;
+	transform: translateY(-5px) scale(1.01);
+}
+.four:hover{
+	transition: ease-in-out 0.3s;
+	transform: translateY(-5px) scale(1.01);
+}
