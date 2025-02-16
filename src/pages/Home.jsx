@@ -15,22 +15,12 @@ import HomeInfo from '../components/HomeInfo'
 
 const Home = () => {
 
-  const audioRef = useRef(new Audio(sakura))
-  audioRef.current.volume = 0.4
-  audioRef.current.loop = true
+  
 
   const [isRotating, setIsRotating] = useState(false)
   const [currentStage, setCurrentStage] = useState(1)
-  const [isAudioPlaying, setIsAudioPlaying] = useState(false)
 
-  useEffect(() => {
-    if(isAudioPlaying){
-      audioRef.current.play()
-    }
-    return () => {
-      audioRef.current.pause()
-    }
-  })
+
 
   const adjustIsland = () =>{
     let screenScale = null
