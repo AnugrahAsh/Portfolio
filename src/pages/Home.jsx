@@ -6,7 +6,7 @@ import Sky from '../models/Sky'
 import Plane from '../models/Plane'
 import Bird from '../models/Bird'
 import HomeInfo from '../components/HomeInfo'
-import sakura from '../assets/sakura.mp3'
+
 // import soundon from '../assets/icons/soundon.png'
 // import soundoff from '../assets/icons/soundoff.png'
 
