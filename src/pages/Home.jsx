@@ -7,58 +7,72 @@ import Plane from '../models/Plane'
 import Bird from '../models/Bird'
 import HomeInfo from '../components/HomeInfo'
 
-// import soundon from '../assets/icons/soundon.png'
-// import soundoff from '../assets/icons/soundoff.png'
-
-{/*  */}
-
-
 const Home = () => {
-
-  
-
   const [isRotating, setIsRotating] = useState(false)
   const [currentStage, setCurrentStage] = useState(1)
+  const [lastX, setLastX] = useState(0)
+  const [rotationSpeed, setRotationSpeed] = useState(0)
 
-
-
-  const adjustIsland = () =>{
+  const adjustIsland = () => {
     let screenScale = null
     let screenPosition = [0, -6.5, -43]
     let rotation = [0.1, 4.7, 0]
 
     if(window.innerWidth < 768){
-      screenScale = [0.9,0.9,0.9]
-      
-    }
-    else{
-      screenScale = [1,1,1]
+      screenScale = [0.9, 0.9, 0.9]
+    } else {
+      screenScale = [1, 1, 1]
     }
 
     return [screenScale, screenPosition, rotation]
   }
 
-  const adjustPlane = () =>{
-    let screenScale, screenPosition; 
+  const adjustPlane = () => {
+    let screenScale, screenPosition
 
     if(window.innerWidth < 768){
-      screenScale = [1.5,1.5,1.5]
-      screenPosition=[0, -1.5, 0]
-    }
-    else{
-      screenScale = [3,3,3]
-      screenPosition=[0, -4, -4]
+      screenScale = [1.5, 1.5, 1.5]
+      screenPosition = [0, -1.5, 0]
+    } else {
+      screenScale = [3, 3, 3]
+      screenPosition = [0, -4, -4]
     }
 
     return [screenScale, screenPosition]
+  }
+
+  const handleTouchStart = (event) => {
+    event.preventDefault()
+    setLastX(event.touches[0].clientX)
+    setIsRotating(true)
+  }
+
+  const handleTouchMove = (event) => {
+    event.preventDefault()
+    if (isRotating) {
+      const touch = event.touches[0]
+      const currentX = touch.clientX
+      const delta = (currentX - lastX) * 0.01
+      setRotationSpeed(delta)
+      setLastX(currentX)
+    }
+  }
+
+  const handleTouchEnd = () => {
+    setIsRotating(false)
+    setRotationSpeed(0)
   }
 
   const [islandScale, islandPosition, islandRotation] = adjustIsland()
   const [planeScale, planePosition] = adjustPlane()
 
   return (
-
-    <section className="w-full h-screen relative">
+    <section 
+      className="w-full h-screen relative"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="absolute top-28 left-0 right-0 z-10 flex justify-center items-center">
         {currentStage && <HomeInfo currentStage={currentStage}/>}
       </div>
@@ -86,19 +100,19 @@ const Home = () => {
             isRotating={isRotating}
             setIsRotating={setIsRotating}
             setCurrentStage={setCurrentStage}
+            rotationSpeed={rotationSpeed}
           />
           <Plane 
             isRotating={isRotating}
             scale={planeScale}
-            position={planePosition} 
-            rotation={[0,20,0]}/>
+            position={planePosition}
+            rotation={[0, 20, 0]}
+            rotationSpeed={rotationSpeed}
+          />
         </Suspense>
       </Canvas>
-      {/* <div className='absolute bottom-2 left-2'>
-        <img src={!isAudioPlaying ? soundoff : soundon} alt="sound" clas/>
-      </div> */}
     </section>
-  );
+  )
 }
 
 export default Home
