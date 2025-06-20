@@ -1,12 +1,28 @@
 import React from 'react'
 import shlokImage from '../assets/images/shlok.png'
 import simpleyelpcampImage from '../assets/images/simpleyelpcamp.png'
-import taskkittyImage from '../assets/images/taskkitty.png'
+import muacmImage from '../assets/images/muacm.png'
 import ascentrixImage from '../assets/images/Ascentrix.png'
 import fianchettoImage from '../assets/images/Fianchetto.png'
 import arrow from '../assets/icons/arrow.svg'
+import noodleuiImage from '../assets/images/noodleui.png'
+import witscribeImage from '../assets/images/witscribe.png'
 
 const projects = [
+  {
+    name: "NoodleUi (Work in Progress)",
+    description: "NoodleUI is a modern, intuitive user interface (UI) framework/library designed to simplify and accelerate the development of responsive web applications. It offers a clean, modular design system with customizable components that enhance user experience while maintaining performance and accessibility standards. Built with scalability in mind, NoodleUI enables developers to create visually appealing interfaces with minimal effort, making it ideal for projects ranging from simple landing pages to complex dashboards.",
+    image: noodleuiImage,
+    color: "bg-purple-300",
+    link: "https://noodle-ui.vercel.app/"
+  },
+  {
+    name: "WitScribe",
+    description: "WitScribe is an AI-powered tool that automatically generates concise and accurate summaries of YouTube videos. By analyzing video transcripts and key points, WitScribe helps users quickly grasp the essential information without watching the entire video. Designed for efficiency and clarity, it’s ideal for students, professionals, and content creators who want to save time and enhance their learning or research experience.",
+    image: witscribeImage,
+    color: "bg-green-300",
+    link: "https://witscribe.vercel.app/"
+  },
   {
     name: "Shlok",
     description: "Shlok is a full-stack platform built to preserve, explore, and share the spiritual and historical essence of Sanatan Dharma (Hinduism). It is designed for devotees, scholars, and enthusiasts who seek easy access to sacred texts, devotional hymns, and historical knowledge in one interactive and engaging space.",
@@ -15,25 +31,11 @@ const projects = [
     link: "https://theshlok.onrender.com/"
   },
   {
-    name: "Ascentrix",
-    description: "Ascentrix is a collaborative platform designed to connect innovators, developers, and creators by enabling them to showcase projects, find contributors, and build powerful teams. It streamlines the process of turning ideas into reality by allowing project owners to list their requirements and connect with skilled individuals.",
-    image: ascentrixImage,
-    color: "bg-green-300",
-    link: ""
-  },
-  {
-    name: "Taskkitty",
-    description: "TaskKitty is a productivity-focused platform designed to help individuals and teams efficiently manage projects, break down tasks, and stay on track with AI-driven assistance. Whether you're working solo or collaborating with a team, TaskKitty ensures smooth project execution with structured task management and intelligent reminders.",
-    image: taskkittyImage,
+    name: "Medicaps University ACM Chapter Website",
+    description: "Contributed to the development of the official website for the MUACM (Medicaps University ACM Chapter) as part of an open-source initiative during HacktoberFest. My work primarily involved refining user experience (UX), building modular and reusable frontend components, and adding interactivity to improve the overall usability of the website. Collaborated with the development team via GitHub, adhering to clean coding practices and contributing meaningful improvements to the project’s open-source codebase.",
+    image: muacmImage,
     color: "bg-red-300",
-    link: ""
-  },
-  {
-    name: "Fianchetto",
-    description: "Fianchetto is a full-stack chess platform designed for both beginners and experienced players to learn, play, and master chess. Whether you want to challenge friends, play against random opponents, or study openings and strategies, Fianchetto provides an immersive and interactive chess experience.",
-    image: fianchettoImage,
-    color: "bg-purple-300",
-    link: ""
+    link: "https://muacm.vercel.app/"
   },
   {
     name: "SimpleYelpCamp",
